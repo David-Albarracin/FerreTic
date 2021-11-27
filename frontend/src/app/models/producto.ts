@@ -1,15 +1,22 @@
-export class Producto{
+export class Producto {
     _id?: number;
+    codigoBarras: string;
     nombre: string;
+    descripcion: string;
     categoria: string;
-    ubicacion: string;
-    precio: number;
+    persona: string;
+    precioVenta: number;
+    stockMin:number;
 
-    constructor(nombre:string, categoria:string, ubicacion:string, precio:number ){
+    constructor(codigoBarras:string, nombre: string,descripcion: string, categoria: string, persona: string, precioVenta: number, stockMin:number
+        ){
+        this.codigoBarras = codigoBarras;
         this.nombre = nombre;
+        this.descripcion = descripcion;
         this.categoria = categoria;
-        this.ubicacion = ubicacion;
-        this.precio = precio;
-    }
+        this.persona = persona;
+        this.precioVenta = precioVenta;
+        this.stockMin = stockMin;
 
+    }
 }
