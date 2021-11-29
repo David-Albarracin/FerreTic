@@ -6,10 +6,10 @@ const app = express();
 
 
 //dbmongo
-conectarDB();
-app.use(cors());
-app.use(express.json());
-app.use('/api/productos', require('./routes/producto'));
+//conectarDB();
+//app.use(cors());
+//app.use(express.json());
+//app.use('/api/productos', require('./routes/producto'));
 
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/FerreTic'));
