@@ -4,10 +4,10 @@ const router = express.Router();
 const productoController = require('../controllers/productoController');
 
 // api/productos
-router.post('/', productoController.crearProducto);
-router.get('/', productoController.obtenerProductos);
-router.put('/:id', productoController.actualizarProducto);
-router.get('/:id', productoController.obtenerProducto);
-router.delete('/:id', productoController.eliminarProducto);
+router.post('https://ferretic.herokuapp.com//', productoController.crearProducto);
+router.get('https://ferretic.herokuapp.com//', productoController.obtenerProductos);
+router.put('https://ferretic.herokuapp.com//:id', productoController.actualizarProducto);
+router.get('https://ferretic.herokuapp.com//:id', productoController.obtenerProducto);
+router.delete('https://ferretic.herokuapp.com//:id', productoController.eliminarProducto);
 
 module.exports = router;
