@@ -18,6 +18,9 @@ app.get('/*', (req, res) =>
     res.sendFile('index.html', {root: 'dist/FerreTic/'}),
 );
 
+app.listen(process.env.PORT || 8080);
+
+/*
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 8080;
 
@@ -25,4 +28,4 @@ const port = process.env.PORT || 8080;
 // Start the app by listening on the default Heroku port
 app.listen(port, host, () => {
     console.console.log('El servidor esta funcionando');
-});
+});*/
