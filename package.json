@@ -1,37 +1,46 @@
 {
-  "name": "js-getting-started",
-  "version": "0.3.0",
-  "description": "A sample Node.js app using Express 4",
-  "engines": {
-    "node": "14.x"
-  },
-  "main": "index.js",
+  "name": "ferre-tic",
+  "version": "0.0.0",
   "scripts": {
-    "start": "node index.js",
-    "test": "node test.js"
+    "ng": "ng",
+    "start": "node server.js",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "heroku-postbuild": "ng build --prod"
   },
+  "engines": {
+    "node": "16.13.0",
+    "npm": "8.1.0"
+  },
+  "private": true,
   "dependencies": {
-    "cool-ascii-faces": "^1.3.4",
-    "ejs": "^3.1.5",
-    "express": "^4.15.2"
+    "@angular/animations": "~13.0.0",
+    "@angular/cli": "^13.0.3",
+    "@angular/common": "~13.0.0",
+    "@angular/compiler": "~13.0.0",
+    "@angular/compiler-cli": "~13.0.0",
+    "@angular/core": "~13.0.0",
+    "@angular/forms": "~13.0.0",
+    "@angular/platform-browser": "~13.0.0",
+    "@angular/platform-browser-dynamic": "~13.0.0",
+    "@angular/router": "~13.0.0",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "rxjs": "~7.4.0",
+    "tslib": "^2.3.0",
+    "typescript": "~4.4.3",
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "got": "^11.3.0",
-    "tape": "^4.7.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/heroku/node-js-getting-started.git"
-  },
-  "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/heroku/node-js-getting-started/issues"
-  },
-  "homepage": "https://github.com/heroku/node-js-getting-started#readme",
-  "author": ""
+    "@angular-devkit/build-angular": "~13.0.1",
+    "@types/jasmine": "~3.10.0",
+    "@types/node": "^12.11.1",
+    "jasmine-core": "~3.10.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0"
+  }
 }
