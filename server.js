@@ -12,8 +12,9 @@ console.log(process.env.DB_MONGO);
 
 //dbmongo
 conectarDB();
-//app.use(cors());
-//app.use(express.json());
+app.use(cors());
+app.use(express.json());
+app.use('/api/productos', require('./routes/producto'));
 
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/FerreTic'));
@@ -24,8 +25,6 @@ app.get('/*', (req, res) =>
 
 app.listen(process.env.PORT || 8080);
 
-
-//app.use('/api/productos', require('./routes/producto'));
 /*
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 8080;
