@@ -1,12 +1,14 @@
 //Install express server
 const express = require('express');
+const conectarDB = require('./config/db');
 const path = require('path');
+const cors = require("cors");
 
 const app = express();
 
 
 //dbmongo
-//conectarDB();
+conectarDB();
 //app.use(cors());
 //app.use(express.json());
 //app.use('/api/productos', require('./routes/producto'));
