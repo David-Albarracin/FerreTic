@@ -12,6 +12,7 @@ const app = express();
 //app.use('/api/productos', require('./routes/producto'));
 
 // Serve only the static files form the dist directory
+
 app.use(express.static('./dist/FerreTic'));
 
 app.get('/*', (req, res) =>
