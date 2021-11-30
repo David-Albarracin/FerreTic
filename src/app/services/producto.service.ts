@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductoService {
-  url = 'http://ferretic.herokuapp.com/api/productos/';
+  url = 'https://ferretic.herokuapp.com/api/productos/';
 
   constructor(private http: HttpClient) { }
 
