@@ -1,56 +1,55 @@
-
 <div class="container mt-5">
-    <div class="justify-content-md-center">
+  <div class="justify-content-md-center">
+    <br>
+    <br>
+    <img class="rounded mx-auto d-block" src="../../../assets/img/box-svgrepo-com.svg"height="100"
+    width="100" alt="">
+    <h1 class="text-center">Productos</h1>
+    <br>
+    <p class="text-center">En el módulo PRODUCTOS podrá agregar nuevos productos al sistema, actualizar datos de los productos, 
+      eliminar o actualizar la imagen de los productos, buscar productos en el sistema, ver todos los productos en almacén, 
+      ver los productos más vendido y filtrar productos por categoría.</p>
       <br>
       <br>
-      <img class="rounded mx-auto d-block" src="../../../assets/img/box-svgrepo-com.svg"height="100"
-      width="100" alt="">
-      <h1 class="text-center">Productos</h1>
-      <br>
-      <p class="text-center">En el módulo PRODUCTOS podrá agregar nuevos productos al sistema, actualizar datos de los productos, 
-        eliminar o actualizar la imagen de los productos, buscar productos en el sistema, ver todos los productos en almacén, 
-        ver los productos más vendido y filtrar productos por categoría.</p>
-        <br>
-        <br>
-    </div>
-      <div class="row">
-          <div class="col-lg-8 offset-lg-2">
-              <div class="card">
-                  <div class="card-body text-center">
-                      <span class="titulo">LISTADO DE PRODUCTOS</span>
-                      <button class="btn btn-success float-end" routerLink="/crear-producto">NUEVO</button>
-                      <table *ngIf="listProductos.length > 0" class="table table-striped mt-3">
-                          <thead>
-                            <tr>
-                              <th scope="col">Codigo de Barras</th>
-                              <th scope="col">Producto</th>
-                              <th scope="col">Descripcion</th>
-                              <th scope="col">Categoria</th>
-                              <th scope="col">Persona</th>
-                              <th scope="col">Precio Venta</th>
-                              <th scope="col">StockMin</th>
-                              <th scope="col"></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr *ngFor="let producto of listProductos">
-                              <td>{{ producto.codigoBarras }}</td>
-                              <td>{{ producto.nombre }}</td>
-                              <td>{{ producto.descripcion }}</td>
-                              <td>{{ producto.categoria }}</td>
-                              <td>{{ producto.persona }}</td>
-                              <td>{{ producto.precioVenta | currency:'COL' }}</td>
-                              <td>{{ producto.stockMin }}</td>
-                              <td>
-                                  <i  class="fas fa-edit text-primary"></i>
-                                  <i  class="fas fa-trash text-danger"></i>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <h5 style="text-align: start; margin-top: 10px;" *ngIf="listProductos.length == 0">No hay productos para mostrar</h5>
-                  </div>
-              </div>
-          </div>
-      </div>
   </div>
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">LISTADO DE PRODUCTOS</span>
+                    <button class="btn btn-success float-end" routerLink="/crear-producto">NUEVO</button>
+                    <table *ngIf="listProductos.length > 0" class="table table-striped mt-3">
+                        <thead>
+                          <tr>
+                            <th scope="col">Codigo de Barras</th>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Persona</th>
+                            <th scope="col">Precio Venta</th>
+                            <th scope="col">StockMin</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let producto of listProductos">
+                            <td>{{ producto.codigoBarras }}</td>
+                            <td>{{ producto.nombre }}</td>
+                            <td>{{ producto.descripcion }}</td>
+                            <td>{{ producto.categoria }}</td>
+                            <td>{{ producto.persona }}</td>
+                            <td>{{ producto.precioVenta | currency:'COL' }}</td>
+                            <td>{{ producto.stockMin }}</td>
+                            <td>
+                                <i [routerLink]="['/editar-producto', producto._id]" class="fas fa-edit text-primary"></i>
+                                <i (click)="eliminarProducto(producto._id)" class="fas fa-trash text-danger"></i>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <h5 style="text-align: start; margin-top: 10px;" *ngIf="listProductos.length == 0">No hay productos para mostrar</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
