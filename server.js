@@ -3,14 +3,20 @@ const express = require('express');
 const conectarDB = require('./config/db');
 const path = require('path');
 const cors = require("cors");
+const { Mongoose } = require('mongoose');
 
 const app = express();
 
+console.log(process.env.DB_MONGO);
 
 //dbmongo
 //conectarDB();
 //app.use(cors());
 //app.use(express.json());
+Mongoose.Promise=global.Promise;
+Mongoose.connect(process.env.DB_MONGO,{
+    useNewUrlParser: true,
+})
 
 
 // Serve only the static files form the dist directory
