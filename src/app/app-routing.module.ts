@@ -4,9 +4,11 @@ import { CrearProductoComponent } from './components/crear-producto/crear-produc
 
 // componentes
 import { ListarProductosComponent } from './components/listar-productos/listar-productos.component';
+import  { InicioComponent } from './components/inicio/inicio.component';
 
 const routes: Routes = [
-  { path: '', component: ListarProductosComponent },
+  { path: '', component: InicioComponent },
+  { path: 'productos', component: ListarProductosComponent },
   { path: 'crear-producto', component: CrearProductoComponent },
   { path: 'editar-producto/:id', component: CrearProductoComponent }
 ];
