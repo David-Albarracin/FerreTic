@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var $: any;
 
 
 @Component({
@@ -8,5 +9,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FerreTic';
-  public isCollapsed = false;
 }

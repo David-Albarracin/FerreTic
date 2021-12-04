@@ -56,7 +56,6 @@ export class CrearProductoComponent implements OnInit {
 
     } else{
       //agregamos
-      console.log(PRODUCTO);
       this._productoService.guardarProducto(PRODUCTO).subscribe(data => {
         this.toastr.success('El producto fue registrado con exito!', 'Producto Registrado!');
         this.router.navigate(['/']);

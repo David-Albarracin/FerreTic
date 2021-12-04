@@ -12,14 +12,11 @@ html {
 
   :root {
     --primary: #111B54;
-    --light: #ffffff;
+    --light: #F5F5F5;
     --grey: #efefef;
 }
 
 body {
-    overflow: hidden;
-    font-family: 'Muli', sans-serif;
-    font-weight: 300;
-    color: var(--primary);
+  font-size: .875rem;
 }
 

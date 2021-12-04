@@ -1,0 +1,15 @@
+.aInicio{
+    text-decoration: none;
+    color: #717171;
+    background: #FFFFFF;
+}
+
+.imgInicio{
+    height: 10vh;
+    width: 10vh;
+}
+
+h1{
+    font-size: 24px;
+    color: #717171;
+}
