@@ -51,14 +51,14 @@ export class CrearProductoComponent implements OnInit {
       //editamos
       this._productoService.editarProducto(this.id, PRODUCTO).subscribe(data => {
         this.toastr.success('El producto fue Actualizado con exito!', 'Producto Actualizado!');
-        this.router.navigate(['/']);
+        this.router.navigate(['/productos']);
       })
 
     } else{
       //agregamos
       this._productoService.guardarProducto(PRODUCTO).subscribe(data => {
         this.toastr.success('El producto fue registrado con exito!', 'Producto Registrado!');
-        this.router.navigate(['/']);
+        this.router.navigate(['/productos']);
       }, error => {
         console.log(error);
         this.productoForm.reset();

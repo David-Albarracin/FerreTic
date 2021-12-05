@@ -1,20 +1,16 @@
 <div class="container">
   <div class="container-fluid justify-content-md-center mt-5">
-    <img class="rounded mx-auto d-block mt-3" src="../../../assets/img/box-svgrepo-com.svg"height="100"
-    width="100" alt="">
-    <h1 class="text-center">Productos</h1>
-    <p class="text-center mt-3">En el módulo PRODUCTOS podrá agregar nuevos productos al sistema, actualizar datos de los productos, 
+    <img class="rounded mx-auto d-block mt-3 img" src="../../../assets/img/package-svgrepo-com 1.svg" alt="">
+    <h1 class="text-center h1">Productos</h1>
+    <p class="text-center mt-3">En el módulo <strong>PRODUCTOS</strong> podrá agregar nuevos productos al sistema, actualizar datos de los productos, 
       eliminar o actualizar la imagen de los productos, buscar productos en el sistema, ver todos los productos en almacén, 
       ver los productos más vendido y filtrar productos por categoría.</p>
   </div>
-  <div class="container-fluid">
-    <div class="row mt-4">
-        <div class="col-lg-8 offset-lg-2">
-            <div class="card">
-                <div class="card-body text-center">
-                    <span class="titulo">LISTADO DE PRODUCTOS</span>
+  <div class="container-fluid mt-5">
+      <div class="table-responsive ">
+        <span class="titulo">LISTADO DE PRODUCTOS</span>
                     <button class="btn btn-success float-end" routerLink="/crear-producto">NUEVO</button>
-                    <table *ngIf="listProductos.length > 0" class="table table-striped mt-3">
+                    <table *ngIf="listProductos.length > 0" class="table mt-3">
                         <thead>
                           <tr>
                             <th scope="col">Codigo de Barras</th>
@@ -43,10 +39,6 @@
                           </tr>
                         </tbody>
                       </table>
-                      <h5 style="text-align: start; margin-top: 10px;" *ngIf="listProductos.length == 0">No hay productos para mostrar</h5>
-                </div>
-            </div>
-        </div>
-    </div>
+      </div>
   </div>
 </div>

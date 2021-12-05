@@ -2,3 +2,12 @@
     cursor: pointer;
     margin-left: 7px;
 }
+.img{
+    height: 10vh;
+    width: 10vh;
+  }
+  
+  .h1{
+    font-size: 2vh;
+    color: #717171;
+  }

@@ -1,9 +1,15 @@
+
 .feather {
     width: 16px;
     height: 16px;
     vertical-align: text-bottom;
   }
-  
+.title-ferre{
+  font-family: 'Pattaya';
+  font-style: normal;
+  font-size: 7vh;
+}
+
   /*
    * Sidebar
    */
