@@ -8,8 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "heroku-postbuild": "ng build --prod",
-    "dev": "nodemon server.js",
-    "preinstall": "npm install dotenv"
+    "dev": "nodemon server.js"
   },
   "private": true,
   "dependencies": {
