@@ -8,18 +8,13 @@ const cors = require("cors");
 
 const app = express();
 
-const mainRoutes = ('/api/productos', require('./routes/producto'));
-const mainRoutess = ('/api/user', require('./routes/userRouter'));
-
-app.use(mainRoutes, mainRoutess)
-
 //console.log(process.env.DB_MONGO);
 
 //dbmongo
 conectarDB();
 app.use(cors());
 app.use(express.json());
-//app.use('/api/productos', require('./routes/producto'), '/api/user', require('./routes/userRouter'));
+app.use('/api/productos', require('./routes/producto'));
 //app.use('/api/user', require('./routes/userRouter'));
 
 // Serve only the static files form the dist directory

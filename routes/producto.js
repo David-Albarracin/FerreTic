@@ -10,4 +10,15 @@ router.put('/:id', productoController.actualizarProducto);
 router.get('/:id', productoController.obtenerProducto);
 router.delete('/:id', productoController.eliminarProducto);
 
+
+const userController = require('../controllers/UserController');
+
+router.post('/registro', userController.registrarUsuario);
+router.post('/login', userController.loginUsuario);
+router.get('/public', userController.public);
+router.get('/private', userController.private);
+router.get('/profile', userController.virificaToken, (req, res)=>{
+    res.send(req.userId);
+});
+
 module.exports = router;
