@@ -11,7 +11,7 @@ import { Router } from '@angular/router'
 export class UserService {
 
   //private url = 'http://localhost:8080/api/user/';
-  private url = 'https://ferretic.herokuapp.com/api/user/';
+  private url = 'https://ferretic.herokuapp.com/api/user';
 
   constructor(
     private http: HttpClient,
