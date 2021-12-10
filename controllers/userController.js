@@ -1,5 +1,5 @@
-const User = require("../models/User");
-const jwt = require('jsonwebtoken');
+const user = require("../models/User");
+const jwt = require('../node_modules/jsonwebtoken/index');
 
 // create one-> POST
 
@@ -16,7 +16,7 @@ const jwt = require('jsonwebtoken');
 
 exports.registrarUsuario = async function (req, res) {
 
-    var newUser = new User({
+    var newUser = new user({
         username: req.body.username,
         password: req.body.password
     });
@@ -30,7 +30,7 @@ exports.registrarUsuario = async function (req, res) {
 exports.loginUsuario = async function (req, res) {
 
     const { username, password } = req.body;
-    const User = await User.findOne({ username })
+    const User = await user.findOne({ username })
 
     if (!User) return res.status(401).send("Usuario no existe");
     if (User.password !== password) return res.status(401).send("Contraseña incorrecta");
