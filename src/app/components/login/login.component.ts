@@ -8,6 +8,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  
 
   user = {
     username: '',
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
   }
 
   constructor(
-    private userService: UserService,
+    public userService: UserService,
     private router: Router
   ) { }
 
@@ -24,6 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
+    
     //console.log(this.user);
     this.userService.login(this.user)
       .subscribe(
