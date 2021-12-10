@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 declare var $: any;
 
 
@@ -8,5 +9,8 @@ declare var $: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(
+    public userService: UserService
+  ) { }
   title = 'FerreTic';
 }
