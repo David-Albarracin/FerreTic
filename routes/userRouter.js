@@ -2,11 +2,11 @@ const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/UserController');
 
-router.post('/registro', userController.registrarUsuario);
-router.post('/login', userController.loginUsuario);
-router.get('/public', userController.public);
-router.get('/private', userController.private);
-router.get('/profile', userController.virificaToken, (req, res)=>{
+router.post('/', userController.registrarUsuario);
+router.post('/', userController.loginUsuario);
+router.get('/', userController.public);
+router.get('/', userController.private);
+router.get('/', userController.virificaToken, (req, res)=>{
     res.send(req.userId);
 });
 

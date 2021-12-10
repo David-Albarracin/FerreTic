@@ -15,7 +15,7 @@ conectarDB();
 app.use(cors());
 app.use(express.json());
 app.use('/api/productos', require('./routes/producto'));
-app.use('/api/user', require('./routes/userRouter'));
+//app.use('/api/user', require('./routes/userRouter'));
 
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/FerreTic'));
