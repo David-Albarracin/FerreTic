@@ -9,7 +9,6 @@ import { Producto } from '../models/producto';
 export class ProductoService {
 
   url = 'https://ferretic.herokuapp.com/api/productos/';
-  //url = 'http://localhost:8080/api/productos/';
 
   constructor(private http: HttpClient) { }
 

@@ -8,14 +8,13 @@ const cors = require("cors");
 
 const app = express();
 
-//console.log(process.env.DB_MONGO);
+console.log(process.env.DB_MONGO);
 
 //dbmongo
 conectarDB();
 app.use(cors());
 app.use(express.json());
 app.use('/api/productos', require('./routes/producto'));
-app.use('/api/user', require('./routes/userRouter'));
 
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/FerreTic'));
@@ -25,7 +24,6 @@ app.get('/*', (req, res) =>
 );
 
 app.listen(process.env.PORT || 8080);
-console.log('node ON');
 
 /*
 const host = process.env.HOST || '0.0.0.0';
