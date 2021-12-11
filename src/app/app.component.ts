@@ -14,6 +14,8 @@ export class AppComponent {
     public userService: UserService
   ) { }
   title = 'FerreTic';
-  show: boolean = true;
+
+  
+
   
 }

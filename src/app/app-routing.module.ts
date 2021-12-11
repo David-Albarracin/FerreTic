@@ -17,14 +17,22 @@ import { UserGuard } from './user.guard'
 
 
 const routes: Routes = [
-  //{ path: '', component: InicioComponent },
-  { path: '', component: LoginComponent },
-  { path: 'ventas', component: VentaComponent },
-  { path: 'clientes', component: ClienteComponent },
+  { path: '', 
+    component: InicioComponent,
+    canActivate: [UserGuard]
+  },
+  { path: 'ventas', 
+    component: VentaComponent, 
+    canActivate: [UserGuard] 
+  },
+  { path: 'clientes', 
+    component: ClienteComponent,
+    canActivate: [UserGuard]
+  },
   {
     path: 'productos',
-    component: ListarProductosComponent
-    //canActivate: [UserGuard]
+    component: ListarProductosComponent,
+    canActivate: [UserGuard]
   },
   {
     path: 'crear-producto',
@@ -36,8 +44,14 @@ const routes: Routes = [
     component: CrearProductoComponent,
     canActivate: [UserGuard]
   },
-  { path: 'proveedores', component: ProveedoresComponent },
-  { path: 'configuracion', component: ConfiguracionComponent },
+  { path: 'proveedores', 
+    component: ProveedoresComponent,
+    canActivate: [UserGuard] 
+  },
+  { path: 'configuracion', 
+    component: ConfiguracionComponent,
+    canActivate: [UserGuard] 
+  },
   //{ path: 'public', component: PublicComponent },
   //{ path: 'private', component: PrivateComponent },
   { path: 'registro', component: RegistroComponent },

@@ -25,14 +25,13 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    
     //console.log(this.user);
     this.userService.login(this.user)
       .subscribe(
         res => {
           console.log(res)
           localStorage.setItem('token', res.token);
-          this.router.navigate(['/productos']);
+          this.router.navigate(['/']);
         },
         err => console.log(err)
       )
